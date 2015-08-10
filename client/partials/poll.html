@@ -1,0 +1,44 @@
+<style>
+	    	th{
+	    		padding: 10px;
+	    	}
+	    	td{
+	    		padding: 10px;
+	    		text-align: center;
+	    	}
+	    </style>
+<div ng-controller='SurveyController'>
+	<a href = '#/dashboard' />Go to Surveys</a><br>
+	<p>{{survey}}</p>
+	<h5>{{survey.question}}</h5>
+	<p>Click the button to choose.</p>
+	<table>
+			<thead>
+				<th>Option</th>
+				<th>Current Votes</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{survey.opt_1}}</td>
+					<td><span> {{count}}</span></td>
+					<td><button ng-click="count = count + 1" ng-init="count=0">Vote</button></td>
+				</tr>
+				<tr>
+					<td>{{survey.opt_2}}</td>
+					<td><span> {{count}}</span></td>
+					<td><button ng-click="count = count + 1" ng-init="count=0">Vote</button></td>
+				</tr>
+				<tr>
+					<td>{{survey.opt_3}}</td>
+					<td><span> {{count}}</span></td>
+					<td><button ng-click="count = count + 1" ng-init="count=0">Vote</button></td>
+				</tr>
+				<tr>
+					<td>{{survey.opt_4}}</td>
+					<td><span> {{count}}</span></td>
+					<td><button ng-click="count = count + 1" ng-init="count=0">Vote</button></td>
+				</tr>
+			</tbody>
+		</table>
+</div>

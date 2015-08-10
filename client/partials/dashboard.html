@@ -1,0 +1,37 @@
+	<style>
+		td{
+			padding: 10px;
+		}
+		h3{
+			margin: 0px;
+		}
+		a{
+			padding: 10px;
+		}
+	</style>    
+<div>
+	<h3><a href='#/'>Welcome </a>{{user.name}}</h3>
+	<br>
+
+	<a href='#/create'/>Create a New Poll</a><br><br>
+
+	Search:<input type="text" ng-model="filter_name"><br><br>
+
+		<h3>Current Polls</h3>
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Survey Question</th>
+				<th>Date Posted</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in users | filter:filter_name">
+                    <td>{{user.name}}</td>
+                    <td><a href="#/poll" ng-click="showOne(user._id)">{{user.questions}}</a></td>
+                    <td>{{user.questions.date_entered | date : format : mediumDate}}</td>
+                    <td><button><a href= '#/dashboard' ng-click="destroySurvey(user._id)">Delete</a></button></td><br>
+                </tr>
+			</tbody>
+		</table>
+</div>

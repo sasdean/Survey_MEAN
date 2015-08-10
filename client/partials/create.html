@@ -1,0 +1,16 @@
+	<style>
+		input{
+			display: block;
+		}
+	</style>
+		<a href='#/dashboard'>Cancel</a>
+
+		<h3>Put the question and options here:</h3>
+			Name: {{user}}<span></span><br><br>
+			Question:<input type='text' ng-model='new_survey.question'>
+			Option 1:<input type='text' ng-model='new_survey.opt_1'>
+			Option 2:<input type='text' ng-model='new_survey.opt_2'>
+			Option 3:<input type='text' ng-model='new_survey.opt_3'>
+			Option 4:<input type='text' ng-model='new_survey.opt_4'><br>
+		
+			<button><a href='#/dashboard' ng-attr-id="{{ user._id }}" ng-click="create(new_survey)">Add Survey</a></button>
